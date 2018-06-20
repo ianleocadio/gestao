@@ -30,6 +30,8 @@ urlpatterns = [
     path('produtos/', include(produtos_urls)),
     path('vendas/', include(vendas_urls)),
     path('login/', auth_views.login, name='login'),
+    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
